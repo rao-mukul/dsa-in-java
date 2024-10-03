@@ -26,7 +26,10 @@ public class lec5 {
      * Output: 10 5
      */
     public static void q2(int a, int b) {
-        
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println(a + " " + b);
     }
 
     /*
@@ -67,7 +70,6 @@ public class lec5 {
      * Input: 65 80
      * Output: 2
      */
-
 
     public static void main(String[] args) {
         // q1(2345);
