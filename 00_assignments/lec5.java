@@ -82,6 +82,14 @@ public class lec5 {
             count++;
         }
         System.out.println(count);
+
+        // ---------------------------------------------------
+        // Count the number of set bits in the XOR result
+        while (xor != 0) {
+            count += xor & 1; // Check if the least significant bit is 1
+            xor >>= 1; // Right shift to check the next bit
+        }
+        // -----------------------------------------------------
     }
 
     public static void main(String[] args) {
