@@ -70,12 +70,25 @@ public class lec5 {
      * Input: 65 80
      * Output: 2
      */
+    public static void q5(int x, int y) {
+        int xor = x ^ y;
+        // System.out.println(xor);
+        // After Xor all the bits which are different in x and y are set to 1
+
+        // Now using Brian Kernighan algorithm we can count the 1 set bits
+        int count = 0;
+        while (xor != 0) {
+            xor = xor & (xor - 1);
+            count++;
+        }
+        System.out.println(count);
+    }
 
     public static void main(String[] args) {
         // q1(2345);
         // q2(5, 10);
         // q3(132);
         // q4(55, 70);
-
+        q5(65, 80);
     }
 }
