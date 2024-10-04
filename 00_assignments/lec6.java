@@ -108,7 +108,7 @@ public class lec6 {
      * 6 - 8 = -2
      */
 
-     public static void q5(){
+    public static void q5() {
         System.out.println("Enter an operator (+,-,*,/): ");
         char operator = sc.next().charAt(0);
         System.out.println("Enter two numbers: ");
@@ -116,27 +116,68 @@ public class lec6 {
         int b = sc.nextInt();
         switch (operator) {
             case '+':
-                System.out.println(a+" + "+b+" = "+(a+b));
+                System.out.println(a + " + " + b + " = " + (a + b));
                 break;
             case '-':
-                System.out.println(a+" - "+b+" = "+(a-b));
+                System.out.println(a + " - " + b + " = " + (a - b));
                 break;
             case '*':
-                System.out.println(a+" * "+b+" = "+(a*b));
+                System.out.println(a + " * " + b + " = " + (a * b));
                 break;
             case '/':
-                System.out.println(a+" / "+b+" = "+(a/b));
+                System.out.println(a + " / " + b + " = " + (a / b));
                 break;
             default:
                 System.out.println("Enter a valid operator");
                 break;
         }
-     }
+    }
+
+    /*
+     * Q6 - Write a program to calculate marks to grades . Follow the conversion
+     * rule as given below :
+     * 1OO - 90 : A+
+     * 90 - 80 : A
+     * 80 - 70 : B+
+     * 70 - 60 : B
+     * 60 - 50 : C
+     * 50 - 40 : D
+     * 40 - 30 : E
+     * 30 -0 : F
+     * Sample Input : Enter Your Marks: 98
+     * Sample Output : Your Grade is A+
+     */
+
+    public static void q6() {
+        System.out.println("Enter Your Marks: ");
+        int m = sc.nextInt();
+        if (m > 90 && m <= 100) {
+            System.out.println("Your Grade is A+");
+        } else if (m > 80 && m <= 90) {
+            System.out.println("Your Grade is A");
+        } else if (m > 70 && m <= 80) {
+            System.out.println("Your Grade is B+");
+        } else if (m > 60 && m <= 70) {
+            System.out.println("Your Grade is B");
+        } else if (m > 50 && m <= 60) {
+            System.out.println("Your Grade is C");
+        } else if (m > 40 && m <= 50) {
+            System.out.println("Your Grade is D");
+        } else if (m > 30 && m <= 40) {
+            System.out.println("Your Grade is E");
+        } else if (m > 0 && m <= 30) {
+            System.out.println("Your Grade is F");
+        } else {
+            System.out.println("Enter an valid Input");
+        }
+    }
+
     public static void main(String[] args) {
         // q1();
         // q2(-1);
         // q3();
         // q4();
-        q5();
+        // q5();
+        q6();
     }
 }
