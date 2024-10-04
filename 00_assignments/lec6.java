@@ -99,12 +99,44 @@ public class lec6 {
      * Q5 - Create a calculator using switch statement to perform addition,
      * subtraction, multiplication
      * and division.
-     * 
+     * Sample Input :
+     * Enter an operator (+, -, *, /): -
+     * Enter two numbers:
+     * 6
+     * 8
+     * Sample Output :
+     * 6 - 8 = -2
      */
+
+     public static void q5(){
+        System.out.println("Enter an operator (+,-,*,/): ");
+        char operator = sc.next().charAt(0);
+        System.out.println("Enter two numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        switch (operator) {
+            case '+':
+                System.out.println(a+" + "+b+" = "+(a+b));
+                break;
+            case '-':
+                System.out.println(a+" - "+b+" = "+(a-b));
+                break;
+            case '*':
+                System.out.println(a+" * "+b+" = "+(a*b));
+                break;
+            case '/':
+                System.out.println(a+" / "+b+" = "+(a/b));
+                break;
+            default:
+                System.out.println("Enter a valid operator");
+                break;
+        }
+     }
     public static void main(String[] args) {
         // q1();
         // q2(-1);
         // q3();
-        q4();
+        // q4();
+        q5();
     }
 }
