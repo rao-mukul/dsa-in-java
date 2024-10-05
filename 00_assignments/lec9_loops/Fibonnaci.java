@@ -20,7 +20,7 @@ public class Fibonnaci {
         int b = 1;
         System.out.print(a + " ");
         System.out.print(b + " ");
-        
+
         for (int i = 0; i < n - 2; i++) {
             int c = a + b;
             System.out.print(c + " ");
