@@ -27,5 +27,7 @@ public class Fibonnaci {
             a = b;
             b = c;
         }
+
+        sc.close();
     }
 }

@@ -20,5 +20,7 @@ public class Factorial {
             fac *= i;
         }
         System.out.println(fac);
+        sc.close();
     }
+
 }

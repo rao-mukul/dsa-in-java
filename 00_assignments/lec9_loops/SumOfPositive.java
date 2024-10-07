@@ -13,15 +13,14 @@ public class SumOfPositive {
         // int n = 0;
         while (sc.hasNext()) {
             int n = sc.nextInt();
-            if (n>=0) {
+            if (n >= 0) {
                 sum += n;
-            }
-            else{
-                sum =-1;
+            } else {
+                sum = -1;
                 break;
             }
         }
         System.out.println(sum);
-
+        sc.close();
     }
 }
