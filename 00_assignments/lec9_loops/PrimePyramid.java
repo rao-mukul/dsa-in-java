@@ -1,19 +1,5 @@
 /*
  * Q8 - Write a program to print a triangle of prime numbers upto given number of lines of the trinagle.
- * Input1:
-2
-Output1:
-2
-3 5
-Input2:
-6
-Output2:
-2
-3 5
-7 11 13
-17 19 23 29
-31 37 41 43 47
-53 59 61 67 71 73
  */
 
 public class PrimePyramid {
