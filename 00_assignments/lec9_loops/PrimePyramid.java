@@ -25,7 +25,7 @@ public class PrimePyramid {
                 System.out.print(" ");
             }
             for (int k = 1; k <= i; k++) {
-                System.out.print("*");
+                System.out.print("* ");
             }
             System.out.println();
         }
