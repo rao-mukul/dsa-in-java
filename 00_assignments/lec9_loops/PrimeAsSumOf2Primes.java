@@ -3,21 +3,28 @@
 public class PrimeAsSumOf2Primes {
 
     public static void main(String[] args) {
-        int givenNo = 41;
-        // Coorect nos: 5, 7, 11, 13, 19, 31, 43, 61, 73
+        int givenNo = 13;
+        // Correct nos: 5, 7, 11, 13, 19, 31, 43, 61, 73
         int prime1 = 1;
         int prime2 = 1;
+        boolean flag = false;
         while (prime1 < givenNo) {
             prime1 = nextPrimeNo(prime1);
             // System.out.println("Outer Loop: "+prime1);
             prime2 = nextPrimeNo(prime1);
             while (prime2 < givenNo) {
                 if (prime1 + prime2 == givenNo) {
-                    System.out.println(prime1 + " + " + prime2 + " = " + givenNo);
+                    flag = true; // Condition Satisfied
                     break;
                 }
                 prime2 = nextPrimeNo(prime2);
             }
+        }
+        if (flag) {
+            System.out.println("True " + givenNo + " can be expressed as sum of primes");
+            System.out.println(givenNo + " = " + prime1 + " + " + prime2);
+        } else {
+            System.out.println("False " + givenNo + " cannot be expressed as sum of primes");
         }
     }
 
