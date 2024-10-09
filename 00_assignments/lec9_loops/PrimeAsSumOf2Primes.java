@@ -10,15 +10,20 @@ public class PrimeAsSumOf2Primes {
         boolean flag = false;
         while (prime1 < givenNo) {
             prime1 = nextPrimeNo(prime1);
-            // System.out.println("Outer Loop: "+prime1);
+            System.out.println("--- " + "Outer Loop: " + prime1 + " ---");
             prime2 = nextPrimeNo(prime1);
             while (prime2 < givenNo) {
+                System.out.println("Inner Loop: " + prime2);
                 if (prime1 + prime2 == givenNo) {
                     flag = true; // Condition Satisfied
                     break;
                 }
                 prime2 = nextPrimeNo(prime2);
             }
+            if (flag) {
+                break;
+            }
+            System.out.println();
         }
         if (flag) {
             System.out.println("True " + givenNo + " can be expressed as sum of primes");
