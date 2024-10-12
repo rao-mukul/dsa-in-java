@@ -22,21 +22,25 @@ class Complex {
     void sum() {
         double rSum = real1 + real2;
         double iSum = imaginary1 + imaginary2;
-        System.out.println("The sum of " + real1 + " + i" + imaginary1 + " and " + real2 + " + i"
-                + imaginary2 + " is: ");
+        System.out.println("The Sum of (" + real1 + " + i" + imaginary1 + ") and (" + real2 + " + i"
+                + imaginary2 + ") is: ");
         System.out.println(rSum + " + i" + iSum);
     }
 
     void difference() {
         double rDiff = real1 - real2;
         double iDiff = imaginary1 - imaginary2;
-        System.out.println("The Differnce of " + real1 + " + i" + imaginary1 + " and " + real2 + " + i"
-                + imaginary2 + " is: ");
+        System.out.println("The Differnce of (" + real1 + " + i" + imaginary1 + ") and (" + real2 + " + i"
+                + imaginary2 + ") is: ");
         System.out.println(rDiff + " + i" + iDiff);
     }
 
     void product() {
-
+        double rPro = (real1 * real2) - (imaginary1 * imaginary2);
+        double iPro = (real1 * imaginary2) + (real2 * imaginary1);
+        System.out.println("The Product of (" + real1 + " + i" + imaginary1 + ") and (" + real2 + " + i"
+                + imaginary2 + ") is: ");
+        System.out.println(rPro + " + i" + iPro);
     }
 
 }
@@ -54,6 +58,9 @@ public class Main4 {
         Complex obj = new Complex(r1, i1, r2, i2);
         obj.sum();
         obj.difference();
+        obj.product();
+
+        sc.close();
 
     }
 }
