@@ -4,6 +4,7 @@ package lec12_methods;
 
 public class Q5 {
 
+    // Simplest Approach
     static int smallestNo(int a, int b, int c) {
         if (a < b && a < c) {
             return a;
@@ -16,6 +17,7 @@ public class Q5 {
         }
     }
 
+    // Nested If Else Approach
     static void smallestNo2(int a, int b, int c) {
         if (a < b) {
             if (a < c) {
@@ -32,10 +34,17 @@ public class Q5 {
         }
     }
 
+    // Using Ternary Operator
+    static void smallestNo3(int a, int b, int c) {
+        int smallest = (a < b) ? (a < c) ? a : c : (b < c) ? b : c;
+        System.out.println(smallest);
+    }
+
     public static void main(String[] args) {
-        // int smallest = smallestNo(7, 7, 7);
-        // System.out.println(smallest);
-        smallestNo2(9, 9, 9);
+        int smallest = smallestNo(7, 6, 3);
+        System.out.println(smallest);
+        smallestNo2(1, 3, 9);
+        smallestNo3(5, 4, 7);
 
     }
 }
