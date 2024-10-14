@@ -16,9 +16,26 @@ public class Q5 {
         }
     }
 
+    static void smallestNo2(int a, int b, int c) {
+        if (a < b) {
+            if (a < c) {
+                System.out.println(a + " is the smallest");
+            } else {
+                System.out.println(c + " is smallest");
+            }
+        } else {
+            if (b < c) {
+                System.out.println(b + " is the smallest");
+            } else {
+                System.out.println(c + " is the smallest");
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int smallest = smallestNo(7, 7, 7);
+        // int smallest = smallestNo(7, 7, 7);
         // System.out.println(smallest);
-        
+        smallestNo2(9, 9, 9);
+
     }
 }
