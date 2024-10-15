@@ -70,3 +70,30 @@ public class PrimeAsSumOf2Primes {
         }
     }
 }
+
+// Hint: Apart from 2, all of the prime numbers are odd. So it is not possible
+// to represent a prime number
+// (which is odd) to be written as a sum of two odd prime numbers, so we are
+// sure that one of the two
+// prime numbers should be 2. So we have to check whether n-2 is prime or not.
+class alternativeApproach {
+    public static void main(String[] args) {
+        int n = 13;
+        if (isPrime(n) && isPrime(n - 2)) {
+            System.out.print(true);
+        } else {
+            System.out.print(false);
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        if (n <= 1)
+            return false;
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0)// if number is divisible by any number other than 0 anditself, denoted by i, it
+                           // is not a prime number
+                return false;
+        }
+        return true;
+    }
+}
