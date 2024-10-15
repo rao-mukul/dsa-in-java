@@ -40,6 +40,11 @@ public class Q5 {
         System.out.println(smallest);
     }
 
+    // Using Math Library Built-in Function
+    static void smallestNo4(int a, int b, int c) {
+        System.out.println(Math.min(a, Math.min(b, c)));
+    }
+
     public static void main(String[] args) {
         int smallest = smallestNo(7, 6, 3);
         System.out.println(smallest);
